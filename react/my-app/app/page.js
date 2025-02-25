@@ -1,13 +1,24 @@
-import Image from "next/image";
+'use client'
 
+import Image from "next/image";
+import {useState} from 'react';
+
+function generateRandomNum(){
+  return Math.floor(Math.random()*100);
+}
 
 export default function Home() {
-const aula = 1;
-return(
-  <div>
-    <h1>Olá mundo!!!</h1>
-    <p>Essa é a nossa primeira {aula}ª aula de react</p>
-  </div>
-);
+  const [randomNum, setRandomNum] = useState();
 
+  function handleClick(){
+    setRandomNum(generateRandomNum());
+  }
+
+  return(
+    <div>
+      <h1>Número aleatório</h1>
+      <button onClick={() => handleClick()}>Gerar número</button>
+      <p>{randomNum}</p>
+    </div>
+  );
 }
