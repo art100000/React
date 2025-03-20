@@ -1,0 +1,42 @@
+.App{
+  padding-top: 2rem;
+}
+
+.App > h1, .App > h2{
+  text-align: center;
+}
+
+.App > h2{
+  margin-top: 0.5rem;
+}
+
+.App > .game__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.player__container{
+  text-align: center;
+}
+
+.player__container .dice__container{
+  padding: 2rem;
+
+  border: solid 0.2rem #1f1f1f;
+  border-radius: 0.5rem;
+}
+
+#player1_btn, #player2_btn, #playagain_btn{
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+
+  border: solid 0.1rem #1f1f1f;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.footer__container{
+  text-align: center;
+}
