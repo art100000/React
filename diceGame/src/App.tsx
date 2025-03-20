@@ -77,13 +77,12 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Jogo de Dados</h1>
-      <p><i>Neste jogo cada jogador deve rolar um dado. Quem tirar o maior número vence a rodada.</i></p>
+      <h1>Jogo dos Dados</h1>
       <h2>{ round }° Rodada</h2>
 
       <div className="game__container">
         <div className="player__container">
-          <h2>Jogador 1</h2>
+          <h2>Player 1</h2>
           <Dice side={ dice1Num } />
           <button 
             id="player1_btn" 
@@ -93,13 +92,13 @@ function App() {
           </button>
         </div>
         <div className="player__container">
-          <h2>Jogador 2</h2>
+          <h2>Player 2</h2>
           <Dice side={ dice2Num } />
           <button 
             id="player1_btn" 
             onClick={ handleP2ClickButton } 
             disabled={ dice2Disabled || (round >= 5) }>
-            Rolar dado
+            Roll Dice
           </button>
         </div> 
       </div>
@@ -115,7 +114,7 @@ function App() {
             id="playagain_btn" 
             onClick={ handlePlayAgainButton } 
             disabled={ (round >= 5) ? false : true }>
-            Jogar Novamente
+            Play Again
           </button>
         </div>
     </div>
