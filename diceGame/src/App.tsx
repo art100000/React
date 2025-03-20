@@ -88,7 +88,7 @@ function App() {
             id="player1_btn" 
             onClick={ handleP1ClickButton } 
             disabled={ dice1Disabled || (round >= 5) }>
-            Rolar dado
+            Roll Dice
           </button>
         </div>
         <div className="player__container">
