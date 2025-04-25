@@ -1,6 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700'], 
+  variable: '--font-poppins',
+});
 
 export default function Conversor_metros(){
     const [conversor, setConvesor] = useState([0, 0]);
@@ -28,16 +35,17 @@ export default function Conversor_metros(){
     }
 
     return (
-        <div className="">
-            <header className="">
-                <h1 className="">Conversor de Medidas</h1>
-            </header>
-            <main className="">
-                <nav className="">
-                    <Link href={'../'} className="">Voltar</Link>
+        <div className=" w-screen h-screen bg-black flex flex-col justify-center items-center">
+            <header>
+                <h1 className={`text-[#7B2CBF] font-[${poppins}] font-bold text-[30px]`}>Conversor de Medidas</h1>
+                <nav className={`text-[#7B2CBF] font-[${poppins}] text-center`}>
+                    <Link href={'../'} className="hover:text-[#A37EFF]">Voltar</Link>
                 </nav>
+            </header>
+            <main className="bg-neutral-500 w-[500px] p-[24px]">
+
                 {conversor.map((_,index) => (
-                <div key={index} className="">
+                <div key={index} >
                     {index === 0 ?
                     <label>Converter Metros para Polegadas</label> :
                     <label>Converter Polegadas para Metros</label>
@@ -48,7 +56,7 @@ export default function Conversor_metros(){
                         onChange={index === 0 
                             ? conversor_metros_polegadas
                             : conversor_polegadas_metros}
-                        className=""
+                         className="border-[1px] ml-[8px]"
                     />
                     <input 
                         type="number"
